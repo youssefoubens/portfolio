@@ -58,6 +58,7 @@ body {
   margin: 0; /* Reset margin */
   padding: 0; /* 1 */
   line-height: inherit; 
+  
   overflow-x: hidden;
 }
 
@@ -1496,3 +1497,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2.25rem;
   }
 }
+
+
+
+

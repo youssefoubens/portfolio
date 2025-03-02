@@ -3,14 +3,18 @@ import AppBanner from '../components/shared/AppBanner';
 import ProjectsGrid from '../components/projects/ProjectsGrid';
 import { ProjectsProvider } from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
+import SkillsTooling from './skilles';
+import ExperienceTimeline from './experience';
 
 const Home = () => {
 	return (
 		<div className="container mx-auto">
-			<AppBanner></AppBanner>
+			<AppBanner />
+
+			<hr className="custom-line my-8" />
 
 			<ProjectsProvider>
-				<ProjectsGrid></ProjectsGrid>
+				<ProjectsGrid />
 			</ProjectsProvider>
 
 			<div className="mt-8 sm:mt-10 flex justify-center">
@@ -21,6 +25,13 @@ const Home = () => {
 				>
 					<Button title="More Projects" />
 				</Link>
+			</div>
+
+			<hr className="custom-line my-8" />
+
+			<div className="container mx-auto p-6">
+				<ExperienceTimeline />s
+				<SkillsTooling />
 			</div>
 		</div>
 	);

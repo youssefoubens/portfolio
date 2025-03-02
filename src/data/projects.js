@@ -62,7 +62,8 @@ export const projectsData = [
 			publishDate: '2024',
 			tags: 'C / Algorithm Analysis / Performance Optimization',
 		},
-	}
+	},
+	
 	
 	
 ];
