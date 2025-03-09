@@ -32,14 +32,5 @@ test('can download cv when clicked on download cv button', async () => {
 
 	await user.click(downloadCVButton);
 
-	// const downloadLink = {
-	// 	click: await user.click(downloadCVButton),
-	// };
-	// jest.spyOn(document, 'createElement').mockImplementation(
-	// 	() => downloadLink
-	// );
-
-	// expect(downloadLink.download).toEqual('Stoman-Resume.pdf');
-	// expect(downloadLink.href).toEqual('/files/Stoman-Resume.pdf');
-	// expect(downloadLink.click).toHaveBeenCalledTimes(1);
+	
 });

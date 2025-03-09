@@ -2,9 +2,10 @@
 
 ## Live Demo
 
-[View the portfolio](https://react-tailwindcss-portfolio.netlify.app)
+
 
 ## Features
+
 
 - Built with [React v18](https://reactjs.org) and [React Router v6](https://reactrouter.com)
 - Styled with [Tailwind CSS v3](https://tailwindcss.com)
