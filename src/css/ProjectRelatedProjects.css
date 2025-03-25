@@ -1,0 +1,78 @@
+/* Background effect for the container */
+.project-related-container {
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	padding: 2rem;
+	border-radius: 15px;
+	margin-top: 2rem;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.project-related-title {
+	font-family: 'General Sans', sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #2c3e50;
+	margin-bottom: 1.5rem;
+	text-align: left;
+}
+
+/* Grid layout for projects */
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+}
+
+/* Individual project item */
+.project-item {
+	position: relative;
+	overflow: hidden;
+	border-radius: 15px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Project image styling */
+.project-image {
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+	transition: opacity 0.3s ease;
+}
+
+.project-item:hover .project-image {
+	opacity: 0.9;
+}
+
+/* Overlay effect on hover */
+.project-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	border-radius: 15px;
+}
+
+.project-item:hover .project-overlay {
+	opacity: 1;
+}
+
+/* Overlay text styling */
+.project-overlay-text {
+	color: white;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+}

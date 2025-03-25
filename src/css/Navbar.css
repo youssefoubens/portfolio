@@ -1,0 +1,174 @@
+/* Navbar.css */
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styles */
+  #nav {
+    background: var(--navbar-bg);
+    transition: background 0.3s ease;
+  }
+  
+  .navbar-dark {
+    --navbar-bg: #333;
+  }
+  
+  .navbar-light {
+    --navbar-bg: #fff;
+  }
+  
+  /* Container */
+  .sm\:container {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Flex utilities */
+  .sm\:flex {
+    display: flex;
+  }
+  
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+  
+  .sm\:items-center {
+    align-items: center;
+  }
+  
+  .block {
+    display: block;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .sm\:hidden {
+    display: block;
+  }
+  
+  .sm\:hidden + * {
+    display: inline-block;
+  }
+  
+  /* Padding */
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .sm\:px-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .p-3 {
+    padding: 0.75rem;
+  }
+  
+  .p-5 {
+    padding: 1.25rem;
+  }
+  
+  .sm\:p-0 {
+    padding: 0;
+  }
+  
+  /* Margin */
+  .mt-5 {
+    margin-top: 1.25rem;
+  }
+  
+  /* Text */
+  .text-left {
+    text-align: left;
+  }
+  
+  /* Link styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button */
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Theme Switcher */
+  .bg-primary-light {
+    background-color: #f0f0f0;
+  }
+  
+  .dark\:bg-ternary-dark {
+    background-color: #1a1a1a;
+  }
+  
+  .text-ternary-dark {
+    color: #1a1a1a;
+  }
+  
+  .dark\:text-ternary-light {
+    color: #f0f0f0;
+  }
+  
+  .hover\:text-gray-50:hover {
+    color: #fafafa;
+  }
+  
+  .dark\:hover\:text-primary-light:hover {
+    color: #d4d4d4;
+  }
+  
+  .dark\:hover\:text-secondary-light:hover {
+    color: #e0e0e0;
+  }
+  
+  .text-gray-200 {
+    color: #e5e5e5;
+  }
+  
+  .shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .rounded-xl {
+    border-radius: 0.75rem;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (min-width: 640px) {
+    .sm\:hidden {
+      display: none;
+    }
+  
+    .sm\:block {
+      display: block;
+    }
+  }

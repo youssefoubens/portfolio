@@ -8,7 +8,7 @@ import ExperienceTimeline from './experience';
 
 const Home = () => {
 	return (
-		<div className="container mx-auto">
+		<div className="container mx-auto px-4 sm:px-6 lg:px-8">
 			<AppBanner />
 
 			<hr className="custom-line my-8" />
@@ -30,7 +30,7 @@ const Home = () => {
 			<hr className="custom-line my-8" />
 
 			<div className="container mx-auto p-6">
-				<ExperienceTimeline />s
+				<ExperienceTimeline />
 				<SkillsTooling />
 			</div>
 		</div>
