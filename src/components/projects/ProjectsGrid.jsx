@@ -3,7 +3,7 @@ import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ProjectsFilter from './ProjectsFilter';
-import '../../css/projectStyles.css'; // Make sure to create this file with the CSS below
+import '../../css/projectStyles.css';
 
 const ProjectsGrid = () => {
     const {
@@ -17,16 +17,15 @@ const ProjectsGrid = () => {
     } = useContext(ProjectsContext);
 
     return (
-        <section className="py-5 sm:py-10 mt-5 sm:mt-10">
-            <div className="text-center">
+        <section className="project_container py-5 sm:py-10 mt-5 sm:mt-10">
+            <div className="title_element">
                 <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-                    Projects Portfolio
+                    Projects
                 </p>
-                <div className="custom-line"></div>
             </div>
 
             <div className="mt-10 sm:mt-16">
-                <h3 className="font-general-regular text-center text-secondary-dark dark:text-ternary-light text-md sm:text-xl mb-3">
+                <h3 className="font-general-regular text-center text-ternary-dark dark:text-ternary-light text-md sm:text-xl mb-3">
                     Search projects by title or filter by category
                 </h3>
                 <div className="flex flex-col sm:flex-row items-center justify-between border-b border-primary-light dark:border-secondary-dark pb-3 gap-3">
@@ -38,7 +37,7 @@ const ProjectsGrid = () => {
                             onChange={(e) => {
                                 setSearchProject(e.target.value);
                             }}
-                            className="w-full sm:w-auto font-general-medium pl-3 pr-1 sm:px-4 py-2 border border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                            className="w-full sm:w-auto font-general-medium pl-3 pr-1 sm:px-4 py-2 border border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-ternary-dark dark:text-ternary-light focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
                             id="name"
                             name="name"
                             type="search"

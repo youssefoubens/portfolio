@@ -6,7 +6,6 @@ const useThemeSwitcher = () => {
 
 	useEffect(() => {
 		const root = window.document.documentElement;
-
 		root.classList.remove(activeTheme);
 		root.classList.add(theme);
 		localStorage.setItem('theme', theme);

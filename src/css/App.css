@@ -1,36 +1,22 @@
-/*== 
- * React & TailwindCSS Portfolio Main CSS File
- * Powered by: @realstoman
-*/
+
 
 body {
 	margin: 0;
 	padding: 0;
 	font-family: 'GeneralSans-Variable';
 }
-/* Ensure the body and html have no margin or padding */
-/* Light theme navbar background */
-/* Light theme navbar background */
-.navbar-light {
-	background-color: #1f2937; /* Light gray color */
+:root {
+	--marker-bg: #ffffff;
+	--marker-border: #00aaff;
   }
-  #nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 80px; /* Ensure it has a fixed height */
-	z-index: 1000; /* Increase z-index to keep it above other elements */
-	/* Ensure it’s visible */
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Dark theme navbar background */
-  .navbar-dark {
-	background-color: #f3f4f6; 
-	/* Dark color (existing dark theme) */
-  }
+/* Add this to your global CSS if not already present */
+.text-ternary-dark {
+    color: rgba(13, 36, 56, 0.9);/* your dark mode text color */
+}
 
+.dark .text-ternary-light {
+    color: #ffffff;
+}
 /* Add padding to the main content to prevent overlap with the fixed navbar */
 .main-content {
   padding-top: 100px; /* Adjust this value to match your navbar height */
@@ -234,8 +220,7 @@ body {
 
 /* Scroll to top style */
 .scrollToTop {
-	@apply bg-indigo-600;
-	@apply text-white;
+	
 	position: fixed;
 	width: 100%;
 	align-items: center;
@@ -322,15 +307,8 @@ body {
   
  
  
-  .custom-line {
-	position: relative; /* Ensures it doesn't break layouts */
-	width: 30%; /* Adjust width as needed */
-	height: 2px; /* Line thickness */
-	background-color: #3b82f6; /* Blue color */
-	border: none; /* Removes default hr border */
-	margin-left: 0; /* Ensures it starts from the left */
-  }
-  
-  
-
  
+  
+  
+  
+  

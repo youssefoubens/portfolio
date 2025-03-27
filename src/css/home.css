@@ -1,69 +1,171 @@
-/* General Styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* App Banner Section */
+/* Home.css */
+:root {
+  --primary: #00aaff;
+  --primary-dark: #0088cc;
+  --text-light: #ffffff;
+  --text-dark: rgba(13, 36, 56, 0.9);
+  --text-muted: #a0aec0;
+  --border-color: #4a5a5b;
+}
+
+/* Overall container for the home page */
+.home-container {
+  color: var(--text-light);
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+ 
+}
+
+/* Spacer to account for the fixed navbar */
+.navbar-spacer {
+  height: 110px; /* Match the navbar height */
+}
+
+/* Wrapper for clipping the AppBanner */
+.clip-wrapper {
+  position: sticky;
+  top: 110px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* AppBanner styling */
+.app-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.banner-content {
+
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  padding: 0 1rem;
+}
+
+
+.banner-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00aaff; /* Light blue for the heading */
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-transform: none; /* Remove uppercase to match the image */
+}
+
+.banner-description {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lets-talk-button {
+  background-color: var(--primary);
+  border-radius: 50px;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.lets-talk-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.view-projects-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.view-projects-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.banner-illustration {
+  flex: 1;
+  min-width: 300px;
+  max-width: 40%;
+  text-align: right;
+  padding: 0 1rem;
+}
+
+.banner-illustration img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Custom horizontal line */
+.custom-line {
+  border: 0;
+  width: 25%;
+  height: 5px;
+  background-color: var(--border-color);
+  margin: 2.5rem 0;
+}
+
+/* More Projects button */
+.more-projects-button {
+  background-color: var(--primary);
+  border-radius: 50px;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.more-projects-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .app-banner {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #4f46e5, #6366f1);
-    color: white;
-    border-radius: 10px;
+    padding: 1.5rem 0;
   }
-  
-  /* Custom Line */
-  .custom-line {
-    border: none;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #4f46e5, transparent);
+
+  .banner-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
   }
-  
-  /* Projects Section */
-  .projects-container {
-    display: flex;
-    flex-wrap: wrap;
+
+  .banner-actions {
     justify-content: center;
-    gap: 20px;
-    padding: 40px 0;
   }
-  
-  /* Button Styling */
-  .custom-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 24px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border-radius: 8px;
-    background-color: #4f46e5;
-    color: white;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  .banner-illustration {
+    max-width: 100%;
+    text-align: center;
+    padding-top: 1rem;
   }
-  
-  .custom-button:hover {
-    background-color: #4338ca;
-    transform: translateY(-2px);
-  }
-  
-  /* Experience & Skills Section */
-  .experience-skills-container {
-    display: flex;
+}
+
+@media (max-width: 480px) {
+  .banner-actions {
     flex-direction: column;
-    gap: 40px;
-    padding: 40px 0;
+    gap: 1rem;
   }
   
-  @media (min-width: 768px) {
-    .experience-skills-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+  .view-projects-link {
+    padding: 0;
   }
-  
+}

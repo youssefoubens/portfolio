@@ -1,10 +1,11 @@
+// ExperienceTimeline.jsx
 import React from 'react';
 import '../css/experience.css';
 
-export default function Experience() {
+export default function ExperienceTimeline() {
     const experiences = [
         {
-            date: "2024 (2 months)",
+            date: "Jul 2024 - Sep 2024 (2 months)",
             company: "VINCI Energies in Morocco",
             role: "Full Stack Developer - Internship",
             description:
@@ -15,17 +16,17 @@ export default function Experience() {
 
     return (
         <div className="experience-section">
-            <h2 className="section-title">My Experience</h2>
+            <h2 className="section-title text-ternary-dark dark:text-ternary-light">My Experience</h2>
             <div className="timeline">
                 {experiences.map((exp, index) => (
                     <div key={index} className="timeline-item">
+                        <div className="timeline-date text-ternary-dark dark:text-ternary-light">{exp.date}</div>
                         <div className="timeline-marker"></div>
                         <div className="timeline-content">
-                            <p className="timeline-date">{exp.date}</p>
-                            <h3 className="timeline-role">
-                                {exp.role.toUpperCase()} • <span className="timeline-company">{exp.company}</span>
+                            <h3 className="timeline-role text-ternary-dark dark:text-ternary-light">
+                                {exp.role.toUpperCase()} • <span className="timeline-company text-ternary-dark dark:text-ternary-light">{exp.company}</span>
                             </h3>
-                            <p className="timeline-description">{exp.description}</p>
+                            <p className="timeline-description text-ternary-dark dark:text-ternary-light">{exp.description}</p>
                         </div>
                     </div>
                 ))}
