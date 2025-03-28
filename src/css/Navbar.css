@@ -25,36 +25,19 @@
   color: rgba(13, 36, 56, 0.9);
 }
 
-/* Container and Layout */
-.sm\:container, .z-10 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 /* Brand Name Styling */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
 .navbar-brand span {
-  font-weight: 700;
   font-size: 1.5rem;
-  letter-spacing: 1px;
+  font-weight: 600;
   background: linear-gradient(90deg, #00aaff, #00ffaa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   transition: all 0.3s ease;
-  padding: 0.5rem 0;
-  font-family: 'Poppins', sans-serif;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand span:hover {
-  background: linear-gradient(90deg, #00ffaa, #00aaff);
   text-shadow: 0 4px 8px rgba(0, 170, 255, 0.3);
 }
 
@@ -90,14 +73,17 @@
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after,
-.nav-link[aria-label="Home"]::after {
-  width: 60%;
+.nav-link-active {
+  color: #00aaff !important;
+  font-weight: 600;
 }
 
-.nav-link[aria-label="Home"] {
-  font-weight: 600;
-  color: #00aaff;
+.nav-link-active::after {
+  width: 50%;
+}
+
+.dark-mode .nav-link-active {
+  color: #00aaff !important;
 }
 
 /* Buttons */
@@ -118,61 +104,67 @@
 }
 
 .theme-switcher {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  padding: 8px !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .theme-switcher:hover {
-  background-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.3);
   transform: rotate(15deg);
 }
 
-/* Mobile Styles */
+/* Mobile Menu */
+.mobile-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 40; /* Ensure it’s below the navbar but above other content */
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+/* Ensure the menu is hidden when the 'hidden' class is applied */
+.mobile-menu.hidden {
+  display: none !important;
+}
+
+/* Responsive Styles */
 @media (max-width: 640px) {
   #nav {
     height: 70px;
   }
-  
-  .font-general-medium {
-    background-color: rgba(13, 36, 56, 0.98);
-    position: fixed;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    animation: slideDown 0.3s ease-out forwards;
-  }
-  
-  .dark-mode .font-general-medium {
-    background-color: rgba(255, 255, 255, 0.98);
-  }
-  
-  .nav-link {
-    padding: 12px 0;
-    font-size: 1.1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    width: 100%;
-  }
-  
-  .dark-mode .nav-link {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  
-  .lets-talk-button {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-  }
-  
+
   .navbar-brand span {
     font-size: 1.3rem;
+  }
+
+  .mobile-menu {
+    background-color: rgba(13, 36, 56, 0.98);
+  }
+
+  .dark-mode .mobile-menu {
+    background-color: rgba(255, 255, 255, 0.98);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  #nav {
+    height: 80px;
+  }
+
+  .navbar-brand span {
+    font-size: 1.4rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0 12px;
+  }
+
+  .lets-talk-button {
+    padding: 8px 20px;
   }
 }
 
@@ -188,6 +180,7 @@
 }
 
 /* Transitions */
-.navbar-light, .dark-mode {
+.navbar-light,
+.dark-mode {
   transition: background-color 0.5s ease, color 0.5s ease;
 }

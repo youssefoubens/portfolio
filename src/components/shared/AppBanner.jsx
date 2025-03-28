@@ -47,16 +47,16 @@ const AppBanner = () => {
           Problem-solving drives my growth. As a Software Engineering student at ENSET Mohammedia, I thrive on tackling challenges in full-stack development, AI, and distributed systems.
         </motion.p>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            ease: 'easeInOut',
-            duration: 0.9,
-            delay: 0.3,
-          }}
-          className="banner-actions flex justify-center sm:justify-start gap-4 mt-8"
-        >
-         <a
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{
+						ease: 'easeInOut',
+						duration: 0.9,
+						delay: 0.3,
+					}}
+					className="flex justify-center sm:block"
+				>
+					<a
 						download="OubenSaidYoussef-CV.pdf"
 						href="/files/OubenSaidYoussef-CV.pdf"
 						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
@@ -67,8 +67,7 @@ const AppBanner = () => {
 							Download CV
 						</span>
 					</a>
-         
-        </motion.div>
+				</motion.div>
       </div>
       <motion.div
         initial={{ opacity: 0, y: -180 }}

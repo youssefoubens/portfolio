@@ -1,0 +1,179 @@
+/* Navbar Container */
+#nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Theme Modes */
+  .navbar-light {
+    background-color: rgba(13, 36, 56, 0.9);
+    color: #ffffff;
+  }
+  
+  .dark-mode {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(13, 36, 56, 0.9);
+  }
+  
+  /* Brand Name Styling */
+  .navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00aaff, #00ffaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-brand span:hover {
+    text-shadow: 0 4px 8px rgba(0, 170, 255, 0.3);
+  }
+  
+  /* Navigation Links */
+  .nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 16px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: #00aaff;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #00aaff;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link-active {
+    color: #00aaff !important;
+    font-weight: 600;
+  }
+  
+  .nav-link-active::after {
+    width: 50%;
+  }
+  
+  .dark-mode .nav-link-active {
+    color: #00aaff !important;
+  }
+  
+  /* Buttons */
+  .lets-talk-button {
+    background: linear-gradient(135deg, #00aaff 0%, #0088cc 100%);
+    border-radius: 30px;
+    padding: 10px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 170, 255, 0.2);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .lets-talk-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 170, 255, 0.3);
+  }
+  
+  .theme-switcher {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-switcher:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: rotate(15deg);
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 40; /* Ensure it’s below the navbar but above other content */
+    animation: slideDown 0.3s ease-out forwards;
+  }
+  
+  /* Ensure the menu is hidden when the 'hidden' class is applied */
+  .mobile-menu.hidden {
+    display: none !important;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 640px) {
+    #nav {
+      height: 70px;
+    }
+  
+    .navbar-brand span {
+      font-size: 1.3rem;
+    }
+  
+    .mobile-menu {
+      background-color: rgba(13, 36, 56, 0.98);
+    }
+  
+    .dark-mode .mobile-menu {
+      background-color: rgba(255, 255, 255, 0.98);
+    }
+  }
+  
+  @media (min-width: 641px) and (max-width: 1023px) {
+    #nav {
+      height: 80px;
+    }
+  
+    .navbar-brand span {
+      font-size: 1.4rem;
+    }
+  
+    .nav-link {
+      font-size: 0.9rem;
+      padding: 0 12px;
+    }
+  
+    .lets-talk-button {
+      padding: 8px 20px;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Transitions */
+  .navbar-light,
+  .dark-mode {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
