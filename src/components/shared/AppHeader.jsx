@@ -208,9 +208,7 @@ const AppHeader = () => {
           </div>
         </div>
       </motion.nav>
-      <div className={`main-content ${activeTheme === 'dark' ? 'dark-mode' : ''}`}>
-        {/* Your main content goes here */}
-      </div>
+   
     </>
   );
 };

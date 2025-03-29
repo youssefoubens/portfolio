@@ -121,16 +121,6 @@
   -webkit-box-orient: vertical;
 }
 
-/* Custom line */
-.custom-line {
-  position: relative;
-  width: 120px;
-  height: 3px;
-  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-  border: none;
-  margin: 2rem auto;
-  border-radius: 2px;
-}
 
 /* Explore More Button */
 .explore-more-btn {
