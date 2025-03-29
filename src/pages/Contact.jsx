@@ -4,12 +4,12 @@ import '../css/contact.css';
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <section className="contact-container">
       <div className="contact-layout contact-animate">
         <ContactForm />
         <ContactDetails />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,9 @@ import { motion } from 'framer-motion';
 
 const About = () => {
 	return (
-		<AboutMeProvider>
+		<div className="home-container">
+
+<AboutMeProvider>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, delay: 1 }}
@@ -34,6 +36,8 @@ const About = () => {
 				<AboutClients />
 			</motion.div>
 		</AboutMeProvider>
+		</div>
+		
 	);
 };
 
