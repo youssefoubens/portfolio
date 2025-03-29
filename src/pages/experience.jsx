@@ -1,4 +1,3 @@
-// ExperienceTimeline.jsx
 import React from 'react';
 import '../css/experience.css';
 

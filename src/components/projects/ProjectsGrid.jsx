@@ -19,9 +19,7 @@ const ProjectsGrid = () => {
     return (
         <section className="project_container py-5 sm:py-10 mt-5 sm:mt-10">
             <div className="title_element">
-                <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-                    Projects
-                </p>
+            <h2 className="section-title text-ternary-dark dark:text-ternary-light">Projects</h2>
             </div>
 
             <div className="mt-10 sm:mt-16">

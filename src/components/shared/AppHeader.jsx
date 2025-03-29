@@ -3,17 +3,18 @@ import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import { NavLink,Link } from 'react-router-dom';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import { motion } from 'framer-motion';
-import Button from '../reusable/Button';
+
 import '../../css/Navbar.css';
 
 const AppHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [activeTheme, setTheme] = useThemeSwitcher();
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navbarHidden, setNavbarHidden] = useState(false);
 
   // Function to toggle the menu
+
+  
   function toggleMenu() {
     setShowMenu((prev) => !prev);
   }
@@ -23,15 +24,6 @@ const AppHeader = () => {
     setShowMenu(false);
   }
 
-  function showHireMeModal() {
-    if (!showModal) {
-      document.documentElement.classList.add('overflow-y-hidden');
-      setShowModal(true);
-    } else {
-      document.documentElement.classList.remove('overflow-y-hidden');
-      setShowModal(false);
-    }
-  }
 
   // Handle navbar hide/show on scroll
   useEffect(() => {
@@ -64,7 +56,7 @@ const AppHeader = () => {
         } ${activeTheme === 'dark' ? 'dark-mode' : 'navbar-light'}`}
       >
         <div className="sm:container sm:mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-4 w-full">
             {/* Brand */}
             <div>
               <NavLink to="/" onClick={closeMenu}>
@@ -74,35 +66,8 @@ const AppHeader = () => {
               </NavLink>
             </div>
 
-            {/* Theme Switcher and Hamburger for Mobile */}
-            <div className="flex items-center space-x-4">
-              <div
-                onClick={() => setTheme(activeTheme)}
-                aria-label="Theme Switcher"
-                className="block sm:hidden bg-primary-light dark:bg-ternary-dark p-2 rounded-xl cursor-pointer"
-              >
-                {activeTheme === 'dark' ? (
-                  <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-                ) : (
-                  <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-                )}
-              </div>
-              <button
-                onClick={toggleMenu}
-                type="button"
-                className="sm:hidden focus:outline-none"
-                aria-label="Hamburger Menu"
-              >
-                {showMenu ? (
-                  <FiX className="h-7 w-7 text-white" />
-                ) : (
-                  <FiMenu className="h-7 w-7 text-white" />
-                )}
-              </button>
-            </div>
-
             {/* Desktop Navigation */}
-            <div className="hidden sm:flex items-center  space-x-10">
+            <div  className="hidden sm:flex items-center space-x-10 flex-grow justify-center ">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -133,7 +98,7 @@ const AppHeader = () => {
               
             </div>
              {/* Theme switcher large screen */}
-            <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
+            <div  className="hidden sm:flex justify-between items-center space-x-6">
               <div className="hidden md:flex">
                 <span
                   className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300 lets-talk-button"
@@ -157,7 +122,33 @@ const AppHeader = () => {
               </div>
             </div>
           </div>
-
+          
+            {/* Theme Switcher and Hamburger for Mobile */}
+          <div  className="flex items-center space-x-4 gap-4">
+              <div
+                onClick={() => setTheme(activeTheme)}
+                aria-label="Theme Switcher"
+                className="block sm:hidden bg-primary-light dark:bg-ternary-dark p-2 rounded-xl cursor-pointer"
+              >
+                {activeTheme === 'dark' ? (
+                  <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+                ) : (
+                  <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+                )}
+              </div>
+              <button
+                onClick={toggleMenu}
+                type="button"
+                className="sm:hidden focus:outline-none"
+                aria-label="Hamburger Menu"
+              >
+                {showMenu ? (
+                  <FiX className="h-7 w-7 text-white" />
+                ) : (
+                  <FiMenu className="h-7 w-7" />
+                )}
+              </button>
+            </div>
           {/* Mobile Menu */}
           <div
             className={`sm:hidden mobile-menu ${
@@ -200,15 +191,20 @@ const AppHeader = () => {
             >
               About
             </NavLink>
+            <button>
             <span
               onClick={() => {
-                showHireMeModal();
+             
                 closeMenu();
               }}
               className="block text-md bg-indigo-500 hover:bg-indigo-600 text-white rounded-sm px-4 py-2 mt-2 w-full text-center"
             >
-              <Button title="Let's Talk" />
+             <Link to="/contact">Let's Talk</Link>
             </span>
+            </button>
+           
+            
+           
           </div>
         </div>
       </motion.nav>

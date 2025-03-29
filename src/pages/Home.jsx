@@ -49,6 +49,7 @@ const Home = () => {
         <SkillsTooling />
 
       </div>
+      <hr className="custom-line my-8 " />
     </div>
   );
 };

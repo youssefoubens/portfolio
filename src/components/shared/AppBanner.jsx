@@ -32,7 +32,7 @@ const AppBanner = () => {
           }}
           className="banner-heading font-general-semibold text-2xl lg:text-3xl xl:text-4xl text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase"
         >
-          Software Engineer | Cloud & AI Enthusiast
+         Software Engineer | Cloud & AI Specialist
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}

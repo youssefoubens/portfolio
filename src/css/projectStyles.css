@@ -12,7 +12,12 @@
   padding: 40px 0;
   font-family: 'Arial', sans-serif;
 }
-
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: left;
+}
 /* Card Container */
 .card-container {
   width: 100%;
