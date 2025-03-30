@@ -127,9 +127,36 @@
     text-align: center;
   }
 
+  /* Adjust the vertical line */
+  .timeline::before {
+    left: 20px; /* Move the vertical line closer to the left for better spacing */
+    width: 2px;
+    background-color: #4a5a5b;
+  }
+
+  /* Adjust the date */
   .timeline-date {
     font-size: 0.9rem;
-    padding-left: 40px; /* Adjust for smaller screens */
+    padding-left: 40px; /* Align the date text to the right of the vertical line */
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Adjust marker size and position */
+  .timeline-marker {
+    width: 15px;
+    height: 15px;
+    left: 12.5px; /* Center the marker on the vertical line (20px - half of marker width) */
+    top: 15px; /* Position it below the date */
+    background-color: #ffffff;
+    border: 3px solid #00aaff;
+    border-radius: 50%;
+  }
+
+  /* Adjust content */
+  .timeline-content {
+    margin-left: 40px; /* Align content to the right of the vertical line */
+    margin-top: 5px;
   }
 
   .timeline-role {
@@ -138,24 +165,5 @@
 
   .timeline-description {
     font-size: 0.9rem;
-  }
-
-  /* Adjust marker size */
-  .timeline-marker {
-    width: 15px;
-    height: 15px;
-    left: 20px; /* Align with the vertical line */
-    top: 15px; /* Position it below the date */
-  }
-
-  /* Adjust vertical line */
-  .timeline::before {
-    left: 30px;
-  }
-
-  /* Adjust content */
-  .timeline-content {
-    margin-left: 40px; /* Align with the vertical line */
-    margin-top: 5px;
   }
 }

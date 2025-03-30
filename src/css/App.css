@@ -13,7 +13,16 @@ body {
 .text-ternary-dark {
     color: rgba(13, 36, 56, 0.9);/* your dark mode text color */
 }
-
+.navbar-light {
+	background-color: rgba(13, 36, 56, 0.9);
+	color: #ffffff;
+  }
+  
+  .dark-mode {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: rgba(13, 36, 56, 0.9);
+  }
+  
 .dark .text-ternary-light {
     color: #ffffff;
 }
