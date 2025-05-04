@@ -8,6 +8,11 @@ import ChatbotImage from '../images/chatbot.png';
 import login from '../images/chatlogin.png';
 import sginup from '../images/chatsignup.png';
 import SortingAnalysisImage from '../images/com.png';
+import HomeImage from '../images/jobhome.png';
+import GenerateImage from '../images/jobgenerate.png';
+import HistoryImage from '../images/jobhistory.png';
+import LoginImage from '../images/joblogin.png';
+import SignupImage from '../images/jobsignup.png';
 // Import icons
 import { FiLinkedin } from 'react-icons/fi';
 
@@ -200,7 +205,51 @@ export const dataofprojects = [
             ],
         },
         RelatedProject: { title: 'Related Projects', Projects: [] },
-    }
+    },
     
-    
+   {
+  id: 6,
+  ProjectHeader: {
+    title: 'Job Application Generator',
+    publishDate: '2025',
+    tags: 'Next.js / OpenAI / Job Automation / Tailwind CSS',
+  },
+  ProjectImages: [
+    { id: 1, title: 'Home Page', img: HomeImage },
+    { id: 2, title: 'Generate Application Page', img: GenerateImage },
+    { id: 3, title: 'History Page', img: HistoryImage },
+    { id: 4, title: 'Login Page', img: LoginImage },
+    { id: 5, title: 'Signup Page', img: SignupImage },
+  ],
+  ProjectInfo: {
+    ClientHeading: 'About Project',
+    CompanyInfo: [
+      { id: 1, title: 'Project Type', details: 'AI-Powered Web Application' },
+      { id: 2, title: 'Technologies Used', details: 'Next.js, React, TypeScript, Tailwind CSS, OpenAI API, Supabase' },
+      { id: 3, title: 'Project Goal', details: 'Help users generate tailored job applications using their resume and job descriptions.' },
+    ],
+    ObjectivesHeading: 'Objective',
+    ObjectivesDetails: 
+      'The goal of this project is to streamline the job application process by using AI to analyze job descriptions and resumes, and generate customized application emails. The system works entirely on the frontend using localStorage, without requiring a database.',
+    Technologies: [
+      { title: 'Tools & Technologies', techs: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'OpenAI API', 'Supabase'] },
+    ],
+    ProjectDetailsHeading: 'Challenges & Solutions',
+    ProjectDetails: [
+      { id: 1, details: 'Integrated OpenAI API to analyze resumes and job descriptions for generating tailored emails.' },
+      { id: 2, details: 'Used localStorage for temporary data storage, avoiding the need for a backend database.' },
+      { id: 3, details: 'Built a clean and responsive UI using Tailwind CSS and React components.' },
+      { id: 4, details: 'Ensured secure API key usage via environment variables and `.env.local` setup.' },
+    ],
+    SocialSharingHeading: 'Share This',
+    SocialSharing: [
+      { id: 1, name: 'LinkedIn', icon: <FiLinkedin />, url: 'https://linkedin.com/in/ouben-said-youssef/' },
+    ],
+  },
+  RelatedProject: {
+    title: 'Related Projects',
+    Projects: [],
+  },
+}
+
 ];

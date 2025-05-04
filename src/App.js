@@ -15,30 +15,28 @@ const Projects = lazy(() => import('./pages/Projects'));
 const ProjectSingle = lazy(() => import('./pages/ProjectSingle.jsx'));
 
 function App() {
-	return (
-		<AnimatePresence>
-			<div className="bg-secondary-light dark:bg-primary-dark transition duration-300 min-h-screen">
-				<Router>
-					<ScrollToTop />
-					<AppHeader />
-					<Suspense fallback={<div className="flex items-center justify-center h-screen text-white">Loading...</div>}>
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="projects" element={<Projects />} />
-							<Route
-								path="/projects/project:id"
-								element={<ProjectSingle />}
-							/>
-							<Route path="about" element={<About />} />
-							<Route path="contact" element={<Contact />} />
-						</Routes>
-					</Suspense>
-					<AppFooter />
-				</Router>
-				<UseScrollToTop />
-			</div>
-		</AnimatePresence>
-	);
+  return (
+    <AnimatePresence>
+      <div className="bg-secondary-light dark:bg-primary-dark transition duration-300 min-h-screen">
+        <Router>
+          <ScrollToTop />
+          <Suspense fallback={<div className="flex items-center justify-center h-screen text-white">Loading...</div>}>
+            <AppHeader />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="projects" element={<Projects />} />
+              <Route path="/projects/project:id" element={<ProjectSingle />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
+            </Routes>
+            <AppFooter />
+          </Suspense>
+          <UseScrollToTop />
+        </Router>
+      </div>
+    </AnimatePresence>
+  );
 }
+
 
 export default App;

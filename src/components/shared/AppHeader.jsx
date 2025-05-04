@@ -104,7 +104,7 @@ const AppHeader = () => {
                   className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300 lets-talk-button"
                   aria-label="Let's Talk Button"
                 >
-                  <Link to="/contact">Let's Talk</Link>
+                  <Link to="/contact"> Let&apos;s Talk</Link>
                 </span>
               </div>
 
@@ -199,7 +199,7 @@ const AppHeader = () => {
               }}
               className="block text-md bg-indigo-500 hover:bg-indigo-600 text-white rounded-sm px-4 py-2 mt-2 w-full text-center"
             >
-             <Link to="/contact">Let's Talk</Link>
+             <Link to="/contact">Let s Talk</Link>
             </span>
             </button>
            

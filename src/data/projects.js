@@ -6,6 +6,7 @@ import MobileImage1 from '../images/machinlearning.png';
 import UIImage1 from '../images/tetrice.png';
 import chatbot from '../images/chatbot.png';
 import SortingAnalysisImage from '../images/com.png';
+import JobApplicationGeneratorImage from '../images/jobhome.png';
 
 export const projectsData = [
 	{
@@ -64,6 +65,17 @@ export const projectsData = [
 		},
 	},
 	
-	
+	{
+	id: 6,
+	title: 'Job Application Generator',
+	category: 'AI-Powered Web App',
+	img: JobApplicationGeneratorImage, // Replace with actual image import
+	ProjectHeader: {
+		title: 'AI-Powered Job Application Generator',
+		publishDate: '2025',
+		tags: 'Next.js / OpenAI / Tailwind CSS / Job Automation',
+	},
+}
+
 	
 ];
