@@ -3,13 +3,20 @@ import '../css/experience.css';
 
 export default function ExperienceTimeline() {
     const experiences = [
+      {
+            date: "Jul 2025 - Aug 2025 (2 months)",
+            company: "Effyis Group in Casablanca, Morocco",
+            role: "Full Stack Developer Java - Internship",
+            description:
+                "Created a load and integration testing strategy for an asynchronous distributed system. Implemented performance tests using JMeter with KLoadGen for Kafka message testing, and monitored system performance with Prometheus and Grafana.",
+        },
         {
             date: "Jul 2024 - Sep 2024 (2 months)",
             company: "VINCI Energies in Morocco",
             role: "Full Stack Developer - Internship",
             description:
                 "Developed a Java-based application for project management and cost estimation using JavaFX and Spring Data JPA. Enhanced workflow efficiency and laid the foundation for AI-powered analytics in construction management.",
-        },
+        }
         // Add more experiences here if needed
     ];
 
